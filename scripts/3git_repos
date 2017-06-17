@@ -1,7 +1,5 @@
 #!/bin/bash
 
-cd /opt
-
 git clone https://github.com/rapid7/metasploit-framework.git /opt/metasploit-framework
 mkvirtualenv metasploit
 /opt/metasploit-framework/msfupdate
