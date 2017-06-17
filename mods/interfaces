@@ -10,7 +10,7 @@ auto lo
 iface lo inet loopback
 
 allow-hotplug usb0
-iface usb0 inet auto
+iface usb0 inet dhcp
 
 allow-hotplug wlan0
 iface wlan0 inet manual
