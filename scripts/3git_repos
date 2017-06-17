@@ -1,0 +1,24 @@
+#!/bin/bash
+
+cd /opt
+
+git clone https://github.com/rapid7/metasploit-framework.git /opt/metasploit-framework
+mkvirtualenv metasploit
+/opt/metasploit-framework/msfupdate
+deactivate
+
+git clone https://github.com/reverse-shell/routersploit.git /opt/routersploit
+mkvirtualenv routersploit
+pip install -r /opt/routersploit/requirements.txt
+deactivate
+
+git clone https://github.com/rbenv/rbenv.git /opt/rbenv
+/opt/rbenv/src/configure && make -C src
+ln -s /opt/rbenv/bin/rbenv /usr/bin
+eval $(rbenv init -)
+rbenv install $(cat /opt/metasploit-framework/.ruby-version)
+gem install bundler
+bundle install
+
+git clone https://github.com/offensive-security/exploit-database.git /opt/exploit-database
+ln -s /opt/exploit-database/searchsploit /usr/bin

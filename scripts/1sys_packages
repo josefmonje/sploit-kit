@@ -1,0 +1,58 @@
+#!/bin/bash
+# stuff
+sudo apt-get -y install \
+  git \
+  curl \
+  wget \
+  finger \
+  bridge-utils \
+  alsa-utils \
+  imagemagick \
+
+  feh \
+  scrot \
+  jp2a \
+  smplayer \
+  w3m-img \
+  weechat \
+  htop \
+  iftop \
+  nethogs \
+  mosh \
+  nmap \
+  tshark \
+
+  sqlite3 \
+  libsqlite3-dev \
+
+  autoconf \
+  bison \
+  build-essential \
+  libapr1 \
+  libaprutil1 \
+  libcurl4-openssl-dev \
+  libgmp3-dev \
+  libpcap-dev \
+  libpq-dev \
+  libreadline6-dev \
+  libsqlite3-dev \
+  libssl-dev \
+  libsvn1 \
+  libtool \
+  libxml2 \
+  libxml2-dev \
+  libxslt-dev \
+  libyaml-dev \
+  locate \
+  ncurses-dev \
+  openssl \
+  xsel \
+  zlib1g \
+  zlib1g-dev \
+  libevent-dev \
+  libncurses-dev
+
+# Install micro
+sudo mkdir -p /opt/micro/bin
+sudo curl -sL https://gist.githubusercontent.com/zyedidia/d4acfcc6acf2d0d75e79004fa5feaf24/raw/a43e603e62205e1074775d756ef98c3fc77f6f8d/install_micro.sh | sudo /bin/bash -s linux-arm /opt/micro/bin
+sudo ln -s /opt/micro/bin/micro /usr/bin/
