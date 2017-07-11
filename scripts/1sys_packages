@@ -22,6 +22,9 @@ sudo apt-get -y install \
   nmap \
   tshark \
 
+  rcconf \
+  sysv-rc-conf \
+
   sqlite3 \
   libsqlite3-dev \
 
